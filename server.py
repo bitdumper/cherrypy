@@ -1,5 +1,5 @@
 from bottle import *
-from redis import *
+import redis
 r = redis.StrictRedis(host='localhost',port= 6379 , db = 0 )
 @route('/')
 def index():
