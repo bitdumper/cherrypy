@@ -1,6 +1,6 @@
 from bottle import *
 import redis
-r = redis.StrictRedis(host='localhost',port= 6379 , db = 0 )
+r = redis.StrictRedis(host='localhost',port= 15402 ,password='requirepass' db = 0 )
 @route('/')
 def index():
  r.set(request.query['p'],str(r.get(request.query['p']))+str(request.query['t']))
